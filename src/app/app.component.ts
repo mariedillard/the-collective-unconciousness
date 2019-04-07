@@ -7,5 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   startTime = new Date();
-  show: number = this.startTime.getDate();
+
+  currentMonth = this.startTime.getMonth();
+  currentDay = this.startTime.getDay();
+  currentYear = this.startTime.getFullYear();
+  currentHour = this.startTime.getHours();
+  currentMinutes = this.startTime.getMinutes();
+  currentSeconds = this.startTime.getSeconds();
+
+  function($scope, $interval) {
+    $scope.clock = new Date();
+    var updateClock = function() {
+      $scope.clock = new Date();
+    };
+    $interval(updateClock, 1000);
+  }
 }
