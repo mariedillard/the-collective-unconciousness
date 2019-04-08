@@ -9,44 +9,33 @@ import { UserTimerComponent } from './user-timer/user-timer.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  startSeconds = 0;
-  // startTime = new Date();
-  // startMonth = this.startTime.getMonth();
-  // startDay = this.startTime.getDay();
-  // startYear = this.startTime.getFullYear();
-  // startHour = this.startTime.getHours();
-  // startMinute = this.startTime.getMinutes();
-  // startSecond = this.startTime.getSeconds();
+  userStartSeconds = 0;
+  userSpent = "0 sec.";
+
+  collectiveStartSeconds = 3601;
+  collectiveSpent = "0 sec.";
+
 
   public userTime() {
-    // var currentTime = new Date();
-    // //var currentMonth = currentTime.getMonth();
-    // var currentDay = currentTime.getDay();
-    // //var currentYear = currentTime.getFullYear();
-    // var currentHour = currentTime.getHours();
-    // var currentMinute = currentTime.getMinutes();
-    // var currentSecond = currentTime.getSeconds();
-    // // var monthsSpent = currentMonth - this.startMonth;
-    // var daysSpent = currentDay - this.startDay;
-    // //var yearsSpent = currentYear - this.startYear;
-    // var hoursSpent = currentHour - this.startHour;
-    // var minutesSpent = currentMinute - this.startMinute;
-    // var secondsSpent = currentSecond - this.startSecond;
-    
-    // console.log(daysSpent + " days " + hoursSpent + " hours " + minutesSpent + " minutes " + secondsSpent + " seconds.")
-
-    this.startSeconds += 1;
-    if(this.startSeconds < 60) {
-      console.log(this.startSeconds);
-    } else if(this.startSeconds%60 === 0) {
-      var minutes = this.startSeconds/60;
-      console.log(minutes + ":0");
-    } else if(this.startSeconds%60 !== 0) {
-      var minutes = Math.floor(this.startSeconds/60);
-      var seconds = this.startSeconds%60;
-      console.log(minutes + ":" + seconds);
+    this.userStartSeconds += 1;
+    if(this.userStartSeconds < 60) {
+      this.userSpent = this.userStartSeconds + " sec.";
+    } else if(this.userStartSeconds%60 === 0) {
+      var minutes = this.userStartSeconds/60;
+      this.userSpent = minutes + "min 0 sec.";
+    } else if(this.userStartSeconds%60 !== 0) {
+      var minutes = Math.floor(this.userStartSeconds/60);
+      var seconds = this.userStartSeconds%60;
+      this.userSpent = minutes + " min " + seconds + " sec.";
+    } else if(this.userStartSeconds%3600 === 0)
+    {
+      this.userSpent = "I hope you feel less alone.";
     }
   }
 
- getUserTime = setInterval(()=> this.userTime(), 1000);
+  public collectiveTime() {
+    
+  }
+
+ refreshUserTime = setInterval(()=> this.userTime(), 1000);
 }
