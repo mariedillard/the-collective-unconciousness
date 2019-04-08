@@ -3,13 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { UserTimerComponent } from './user-timer/user-timer.component';
+import { TimeKeeperComponent } from './time-keeper/time-keeper.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserTimerComponent
+    TimeKeeperComponent
   ],
   imports: [
     BrowserModule

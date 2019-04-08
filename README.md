@@ -1,27 +1,37 @@
-# TheCollectiveUnconciousness
+# _**The Collective Unconciousness v1.0.0**_
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+#### _03/29/2019_
 
-## Development server
+#### By _**Marie Dillard**_
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
+_A simple web app that emulates the former website TheCollectiveUnconcious.org with a little creative liberty taken here and there._
 
-## Code scaffolding
+### Specs
+* _It is able to count the amount of time you've had the webpage open._
+* _It is able to add the amount of time you've had the webpage open to the amount of time other's have spent on the page._
+*_It will be able to return this information to the amount of time other people have spent on the page. (Not yet implemented.)_
+*_It will be able to return how many people are viewing the page. (Not yet implemented.)_
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Known Bugs
+_No known bugs._
 
-## Build
+## Setup instructions
+* _Install Node.Js_
+* _Install Angular CLI v 1.6.5_
+* _Clone repository to your desktop using "$ git clone https://github.com/milkybot/the-collective-unconciousness.git"_
+* _Navigate into folder and run "$ npm i" to add all packages and dependencies._
+* _Navigate into folder and run "$ npm run start"._
+* _Open http://localhost:4200/_
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Technologies Used
+* _HTML/CSS_
+* _JQuery & Javascript_
+* _Node.js_
+* _Jasmine_
+* _Karma_
+* _Angular CLI v 1.6.5_
 
-## Running unit tests
+### License
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Copyright (c) 2019 **_milkybot_**
