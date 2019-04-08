@@ -35,7 +35,18 @@ export class AppComponent {
     
     // console.log(daysSpent + " days " + hoursSpent + " hours " + minutesSpent + " minutes " + secondsSpent + " seconds.")
 
-    console.log(this.startSeconds += 1);
+    this.startSeconds += 1;
+    if(this.startSeconds < 60) {
+      console.log(this.startSeconds);
+    } else if(this.startSeconds%60 === 0) {
+      var minutes = this.startSeconds/60;
+      console.log(minutes + ":0");
+    } else if(this.startSeconds%60 !== 0) {
+      var minutes = Math.floor(this.startSeconds/60);
+      var seconds = this.startSeconds%60;
+      console.log(minutes + ":" + seconds);
+    }
   }
+
  getUserTime = setInterval(()=> this.userTime(), 1000);
 }
