@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UserTimerComponent } from './user-timer.component';
+import { UnconciousnessComponent } from './unconciousness.component';
 
-describe('UserTimerComponent', () => {
-  let component: UserTimerComponent;
-  let fixture: ComponentFixture<UserTimerComponent>;
+describe('UnconciousnessComponent', () => {
+  let component: UnconciousnessComponent;
+  let fixture: ComponentFixture<UnconciousnessComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UserTimerComponent ]
+      declarations: [ UnconciousnessComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UserTimerComponent);
+    fixture = TestBed.createComponent(UnconciousnessComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
