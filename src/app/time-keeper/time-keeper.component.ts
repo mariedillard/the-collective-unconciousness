@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './time-keeper.component.html',
   styleUrls: ['./time-keeper.component.css']
 })
-export class TimeKeeperComponent implements OnInit {
+export class TimeKeeperComponent{
 
   userStartSeconds = 0;
   userSpent = "0 sec.";
@@ -61,8 +61,4 @@ export class TimeKeeperComponent implements OnInit {
 
  refreshUserTime = setInterval(()=> this.userTime(), 1000);
  refreshCollectiveTime = setInterval(()=> this.collectiveTime(), 1000);
-
-  ngOnInit() {
-  }
-
 }
