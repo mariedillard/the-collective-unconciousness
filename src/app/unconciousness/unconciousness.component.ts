@@ -62,6 +62,6 @@ export class UnconciousnessComponent {
 
  @HostListener('window:beforeunload', ['$event'])
   beforeunloadHandler(event) {
-      this.endChat();
+    
   }
 }
