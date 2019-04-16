@@ -10,8 +10,12 @@ export class TimeService {
     this.times = database.list('times');
   }
   
-  getTime(){
-    //enter full time here
+  getTime() {
+    let secondsSum;
+    this.database.list("/times/").subscribe(_data => {
+      secondsSum = _data.reduce((sum,item) => sum + item.seconds, 0);      
+    });
+    return secondsSum;
   }
 
   addTime(newTime: Time) {

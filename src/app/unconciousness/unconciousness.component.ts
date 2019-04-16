@@ -1,16 +1,24 @@
 import { Component, HostListener } from '@angular/core';
+import { TimeService } from '../time.service';
+import { Time } from '../time.model';
 
 @Component({
   selector: 'app-unconciousness',
   templateUrl: './unconciousness.component.html',
-  styleUrls: ['./unconciousness.component.css']
+  styleUrls: ['./unconciousness.component.css'],
+  providers: [TimeService]
 })
 export class UnconciousnessComponent {
-  collectiveStartSeconds = 6215;
+  constructor(private timeService: TimeService) { }
+
+  collectiveStartSeconds = 0;
   collectiveSpent = "0 sec.";
+  pageTime = 0;
+
 
   public collectiveTime() {
-    this.collectiveStartSeconds ++;
+    this.pageTime ++;
+    this.collectiveStartSeconds = this.pageTime + this.timeService.getTime();
     if(this.collectiveStartSeconds < 60) {
       this.collectiveSpent = this.collectiveStartSeconds + " sec.";
     } else if(this.collectiveStartSeconds%3600 === 0) {
