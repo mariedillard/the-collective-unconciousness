@@ -11,14 +11,14 @@ export class TimeService {
   }
   
   getTime() {
-    let secondsSum;
+    let secondsSum: number;
     this.database.list("/times/").subscribe(_data => {
-      secondsSum = _data.reduce((sum,item) => sum + item.seconds, 0);      
+      secondsSum = _data.reduce((sum,item)=>sum+item.seconds,0);
     });
     return secondsSum;
   }
 
-  addTime(newTime: Time) {
-    this.times.push(newTime);
+  addTime(newTime: number) {
+    this.times.push(new Time(newTime));
   }
 }

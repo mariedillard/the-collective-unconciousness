@@ -70,6 +70,6 @@ export class UnconciousnessComponent {
 
  @HostListener('window:beforeunload', ['$event'])
   beforeunloadHandler(event) {
-    
+    this.timeService.addTime(this.userStartSeconds);
   }
 }
